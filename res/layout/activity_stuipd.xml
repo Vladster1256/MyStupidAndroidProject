@@ -23,4 +23,13 @@
         android:layout_centerVertical="true"
         android:text="@string/funTexty" />
 
+    <Button
+        android:id="@+id/secondButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/songStuff" />
+
 </RelativeLayout>

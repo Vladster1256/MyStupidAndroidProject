@@ -15,6 +15,7 @@ import android.widget.TextView;
 public class StuipdActivity extends Activity
 {
 	private Button appButton;
+	private Button appButton1;
 	private TextView appText;
 	private RelativeLayout appLayout;
 	private ArrayList<Integer> colorList; 
@@ -27,6 +28,7 @@ public class StuipdActivity extends Activity
 		
 		//Gives you access to a button or any view object
 		appButton = (Button) findViewById(R.id.firstButton);
+		appButton1 = (Button) findViewById(R.id.secondButton);
 		appText = (TextView) findViewById(R.id.stupidTextView);
 		appLayout = (RelativeLayout) findViewById(R.id.appLayout);
 		
@@ -52,12 +54,23 @@ public class StuipdActivity extends Activity
 			@Override
 			public void onClick(View v)
 			{
-				appLayout. setBackgroundResource(fillTheColorList)
-				{
-				}
+				int randomPosition=(int) (Math.random()*colorList.size());
+				appLayout.setBackgroundResource(colorList.get(randomPosition));
 				
 			}
 			
+		});
+		appButton1.setOnClickListener(new View.OnClickListener()
+		{
+
+			@Override
+			public void onClick(View v)
+			{
+				// TODO Auto-generated method stub
+				appLayout. setBackgroundResource(R.color.uglyGreen);
+			}
+					
+				
 		});
 	}
 }
