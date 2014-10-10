@@ -52,7 +52,9 @@ public class StuipdActivity extends Activity
 			@Override
 			public void onClick(View v)
 			{
-				appLayout.setBackgroundResource(R.color.uglyGreen);
+				appLayout. setBackgroundResource(fillTheColorList)
+				{
+				}
 				
 			}
 			
