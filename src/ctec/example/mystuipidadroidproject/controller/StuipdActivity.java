@@ -12,6 +12,11 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+/**
+ * Stupid activity controls the app for StuipdAndroidProject
+ * @author Vladster1256
+ * @version 1.0
+ */
 public class StuipdActivity extends Activity
 {
 	private Button appButton;
@@ -20,6 +25,9 @@ public class StuipdActivity extends Activity
 	private RelativeLayout appLayout;
 	private ArrayList<Integer> colorList; 
 	
+	/**
+	 * onCreate is the constructor, we construct what our buttons are!!!!!!!!!!!!1
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -32,12 +40,16 @@ public class StuipdActivity extends Activity
 		appText = (TextView) findViewById(R.id.stupidTextView);
 		appLayout = (RelativeLayout) findViewById(R.id.appLayout);
 		
+		//Created an array list called colorList
 		colorList = new ArrayList<Integer>();
 		
 		fillTheColorList();
 		setupListeners();
 	}
 	
+	/**
+	 * We add colors to colorList with fillTheColorList Object
+	 */
 	private void fillTheColorList()
 	{
 		colorList.add(R.color.uglyRed);	
@@ -46,12 +58,21 @@ public class StuipdActivity extends Activity
 		colorList.add(R.color.uglyGreen);
 	}
 	
+	/**
+	 * our listeners that listens to activity
+	 */
 	private void setupListeners()
 	{
+		/**
+		 * our appButton(firstButton) is what is listening to clicks
+		 */
 		appButton.setOnClickListener(new View.OnClickListener()
 		{
 
 			@Override
+			/**
+			 * When we click the button, we set the background as a random color in the array list
+			 */
 			public void onClick(View v)
 			{
 				int randomPosition=(int) (Math.random()*colorList.size());
